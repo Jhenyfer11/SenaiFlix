@@ -34,13 +34,14 @@ nav {
 
 footer {
     padding-top: 40px;
-    padding-bottom: 4opx;
+    padding-bottom: 40px;
 
     width: 100%;
     height: auto;
 
     background-color: #fff;
     display: flex;
+
     justify-content: center;
     gap: 50px;
     align-items: center;
@@ -48,6 +49,46 @@ footer {
 
 footer p{
     color: #000;
+    margin-bottom: 10px;
+}
 
-    margin-bottom: 100ex;
+.imgs {
+    display: flex;
+}
+
+img {
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hamburguer-menu{
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .cabecalho{
+        padding: 15px 20px;
+        height: 60px;
+        font-size: 1em;
+    }
+
+    .hamburguer-menu {
+        display: block;
+    }
+    
+    nav {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    
+
+
 }
