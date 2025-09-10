@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-family: "Ubuntu", sans-serif;
 }
 
 body {
-    background-color: #000;
+    background-color: #000000;
 }
 
 .cabecalho {
@@ -18,7 +20,7 @@ body {
 
     padding: 25px 80px;
     height: 70px;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 a {
@@ -29,26 +31,22 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 25px;
-
 }
 
 footer {
     padding-top: 40px;
     padding-bottom: 40px;
-
     width: 100%;
     height: auto;
-
     background-color: #fff;
     display: flex;
-
     justify-content: center;
     gap: 50px;
     align-items: center;
 }
 
-footer p{
-    color: #000;
+footer p {
+    color: #000000;
     margin-bottom: 10px;
 }
 
@@ -58,25 +56,27 @@ footer p{
 
 img {
     width: 30px;
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
-.hamburguer-menu{
+.hamburger-menu {
     display: none;
 }
 
-@media(max-width: 768px) {
-    .cabecalho{
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+    .cabecalho {
         padding: 15px 20px;
         height: 60px;
         font-size: 1em;
     }
 
-    .hamburguer-menu {
+    .hamburger-menu {
         display: block;
     }
-    
+
     nav {
         display: none;
     }
@@ -88,7 +88,4 @@ img {
         padding-bottom: 30px;
         text-align: center;
     }
-    
-
-
 }
