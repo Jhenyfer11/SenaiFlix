@@ -64,9 +64,26 @@ document.addEventListener("DOMContentLoaded", function () {
     //Atualiza a exibição de filmes e series com base no genero selecionado
     function aplicarFiltro(generoSelecionado) {
 
-        renderizar(filmesCards, dados.filmes, generoSelecionado)
-
+        renderizar(filmesCards, dados.filmes, generoSelecionado);
+        renderizar(seriesCard, dados.series, generoSelecionado);
     }
 
+    //quando o usuario troca o genero no <select>
+    if (selectGenero) {
+        selectGenero.addEventListener("change", function () {
+            aplicarFiltro(this.value); //pega o valor selecionado
+        })
+    }
+
+
+    //Quando clica o botão limpar
+    if (btnLimpar) {
+        btnLimpar.addEventListener("click", function () {
+            selectGenero.selectedIndex = 0; //volta para todos
+            aplicarFiltro("todos") // mostrar todos novamente
+        })
+    }
+    //exibe todos os itens logo no inicio 
+    aplicarFiltro("todos");
 
 });
